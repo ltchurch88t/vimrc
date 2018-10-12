@@ -8,3 +8,7 @@ Plug 'neomake/neomake'
 Plug 'dbakker/vim-lint'
 Plug 'Shougo/deoplete.nvim'
 Plug 'tweekmonster/deoplete-clang2'
+Plug 'gko/vim-coloresque'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }  

@@ -9,15 +9,26 @@ au BufReadPost *.inc set syntax=html
 map <C-o> :NERDTreeToggle<CR>
 inoremap { {<CR><BS>}<Esc>ko
 inoremap [ [<CR><BS>]<Esc>ko
-inoremap <div <div class=""><CR><Esc>o</div><Esc>2k6la
+inoremap <div <div class=""><CR></div><Esc>k6la
 inoremap <img <img src="" alt=""/><Esc>10ha
-inoremap <section <section class=""><CR><Esc>o</section><Esc>2k6la
-inoremap <span <span class=""><CR><Esc>o</span><Esc>2k6la
-inoremap <p <p class=""><CR><Esc>o</p><Esc>2k6la
+inoremap <section <section class=""><CR></section><Esc>k6la
+inoremap <span <span class=""><CR></span><Esc>k6la
+inoremap <p <p class=""><CR></p><Esc>k6la
+inoremap <h1 <h1></h1><Esc>5ha
+inoremap <h2 <h2></h2><Esc>5ha
+inoremap <h3 <h3></h3><Esc>5ha
+inoremap <asp <asp:ContentPlaceHolder ID="" runat="server" visible="true"></asp:ContentPlaceHolder><Esc>
+inoremap overlay <div class="overlay"></div>
+inoremap .overlay .overlay {
+inoremap gsap <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script><Esc>
+nnoremap <Tab><Space> <Esc>i<Tab>
+nnoremap <Tab><Space><Space> <Esc>i<Tab><Tab>
+nnoremap <Tab><CR> <Esc>j<Tab><Space>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+nnoremap ; :
 nnoremap ,scrollhead :-1read $HOME/.vim/snippets/.skeleton.scrollhead.js<CR>
 nnoremap ,defaultbanner :-1read $HOME/.vim/snippets/.skeleton.defaultbanner.html<CR>
 set nocompatible
@@ -38,3 +49,9 @@ augroup ProjectDrawer
   autocmd!
   autocmd VimEnter * NERDTree
 augroup END
+function! Send()
+  :!git add .
+  :!git commit -m "updates"
+  :!git push
+endfunction
+command Push call Send()
