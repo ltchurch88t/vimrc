@@ -19,7 +19,7 @@ inoremap <h2 <h2></h2><Esc>5ha
 inoremap <h3 <h3></h3><Esc>5ha
 inoremap <asp <asp:ContentPlaceHolder ID="" runat="server" visible="true"></asp:ContentPlaceHolder><Esc>
 inoremap overlay <div class="overlay"></div>
-inoremap .overlay .overlay {
+inoremap .overlay .overlay {<Cr><BS>}<Esc>ko height: 100%;<Cr>width: 100%;<Cr>background: $overlay;<Cr>position: absolute;<Cr>top: 0;<Cr>left: 0;<Esc>
 inoremap gsap <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script><Esc>
 nnoremap <Tab><Space> <Esc>i<Tab>
 nnoremap <Tab><Space><Space> <Esc>i<Tab><Tab>
