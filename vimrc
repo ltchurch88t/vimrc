@@ -39,7 +39,13 @@ set smarttab
 set splitbelow
 set splitright
 let g:impact_transbg=1
-colorscheme summerfruit256 
+if strftime("%H") < 19
+  set background=light
+  colorscheme summerfruit256
+else
+  colorscheme gruvbox
+  set background=dark
+endif
 set colorcolumn=
 set path+=**
 set wildmenu
@@ -49,9 +55,3 @@ augroup ProjectDrawer
   autocmd!
   autocmd VimEnter * NERDTree
 augroup END
-function! Send()
-  :!git add .
-  :!git commit -m "updates"
-  :!git push
-endfunction
-command Push call Send()
