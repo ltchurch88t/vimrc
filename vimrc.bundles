@@ -13,3 +13,4 @@ Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }  
 Plug 'ltchurch88t/vim-git'
+Plug 'ltchurch88t/vim-comment-styles'
