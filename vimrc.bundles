@@ -1,16 +1,12 @@
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
 Plug 'brooth/far.vim'
-Plug 'neovim/nvimdev.nvim'
-Plug 'tbastos/vim-lua'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'tweekmonster/helpful.vim'
-Plug 'neomake/neomake'
-Plug 'dbakker/vim-lint'
-Plug 'Shougo/deoplete.nvim'
-Plug 'tweekmonster/deoplete-clang2'
 Plug 'gko/vim-coloresque'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }  
 Plug 'ltchurch88t/vim-git'
-Plug 'ltchurch88t/vim-comment-styles'
+Plug 'connorholyday/vim-snazzy'
+Plug 'itchyny/lightline.vim'
+Plug 'kchmck/vim-coffee-script'
+Plug 'adlawson/vim-sorcerer'
+Plug 'morhetz/gruvbox'
